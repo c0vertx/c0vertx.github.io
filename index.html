@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./assets/logo.png">
+    <script src="index.js" defer></script>
+
+    <title>C0vertX</title>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="con2">
+        <img src="assets/logo.png" alt="" class="icon">
+
+        <h2 class="center-text">
+            <span class="c c_da dynamic">C</span>
+            
+            ∅VΞr†<span class ="dynamic x_da">x</span>
+           <br> 
+        </h2>  <br>
+        <p class="desc"> ❯ <span  style="font-size: 20px" class="dynamic super_c">C</span>0vertX - The Art of Hiding Messages in Plain Sight</p>
+    <hr> 
+    </div>
+ 
+<main>
+
+
+<label for="input-text"> ❯ Input </label>
+
+<input type="text" id="input-text" placeholder="type something..! " class="input-text input_content">
+
+
+
+
+<div class="buttons">
+
+        <button onclick="encoder()" class="encode-button" >Encode</button> &nbsp;
+
+<button onclick="clearer()" class="clear-button" >Clear</button>
+
+<button onclick="decoder()" class="decode-button" >Decode</button>
+
+
+
+</div>
+
+<label for="input-text"> ❯ Result</label>
+
+<textarea name="output" id="output"  contenteditable="true" class="output-text" cols="30" rows="10"></textarea>
+
+
+<div class="options">
+
+
+    <svg width="21px" height="22px" viewBox="0 0 23 24" class="js-textareacopybtn"  version="1.1"  id="svg-icon"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <desc>Created with Sketch.</desc>
+        <g id="🔍-Product-Icons" stroke="none" stroke-width="3" fill="none" fill-rule="evenodd">
+            <g id="ic_fluent_copy_24_regular" fill="#212121" fill-rule="nonzero">
+                <path d="M5.50280381,4.62704038 L5.5,6.75 L5.5,17.2542087 C5.5,19.0491342 6.95507456,20.5042087 8.75,20.5042087 L17.3662868,20.5044622 C17.057338,21.3782241 16.2239751,22.0042087 15.2444057,22.0042087 L8.75,22.0042087 C6.12664744,22.0042087 4,19.8775613 4,17.2542087 L4,6.75 C4,5.76928848 4.62744523,4.93512464 5.50280381,4.62704038 Z M17.75,2 C18.9926407,2 20,3.00735931 20,4.25 L20,17.25 C20,18.4926407 18.9926407,19.5 17.75,19.5 L8.75,19.5 C7.50735931,19.5 6.5,18.4926407 6.5,17.25 L6.5,4.25 C6.5,3.00735931 7.50735931,2 8.75,2 L17.75,2 Z M17.75,3.5 L8.75,3.5 C8.33578644,3.5 8,3.83578644 8,4.25 L8,17.25 C8,17.6642136 8.33578644,18 8.75,18 L17.75,18 C18.1642136,18 18.5,17.6642136 18.5,17.25 L18.5,4.25 C18.5,3.83578644 18.1642136,3.5 17.75,3.5 Z" id="🎨-Color"></path>
+            </g>
+        </g>c
+    </svg>
+
+
+
+
+    <input type="button" id="specialBtn"
+    value="Download" /> 
+    
+    
+    <a href="/" class="refresher">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M11.975 20.2q-3.425 0-5.812-2.388Q3.775 15.425 3.775 12q0-3.425 2.388-5.813Q8.55 3.8 11.975 3.8q1.775 0 3.388.725 1.612.725 2.762 2.1V3.8h2.1v7.3h-7.3V9H17.1q-.8-1.375-2.162-2.15-1.363-.775-2.963-.775-2.475 0-4.2 1.725T6.05 12q0 2.475 1.725 4.2t4.2 1.725q1.9 0 3.425-1.075T17.55 14h2.375q-.7 2.725-2.912 4.462Q14.8 20.2 11.975 20.2Z"/></svg>
+    </a>
+
+</div>
+
+
+
+</main>
+
+<div class="say_copied copied"></div>
+
+</div>
+
+
+<footer>
+    <p>&copy; <a href="https://github.com/0xcyberpj/"> P4UL </a></p> <img src="https://www.0xcyberpj.ml/winbox-portfolio/images/mask.gif" alt="" class="logo">
+</footer>
+
+</body>
+<script>
+    function download(f, t) {
+
+    
+    var e = document.createElement('a');
+    e.setAttribute('href','data:text/plain;charset=utf-8, '
+    + encodeURIComponent(t));
+    e.setAttribute('download', f);
+    document.body.appendChild(e);
+    e.click();
+    document.body.removeChild(e);}
+    
+    
+
+    document.getElementById("specialBtn").addEventListener("click", function() {
+    var t = document.querySelector(".output-text").innerHTML;
+    var f ="result.txt"
+    download(f, t);
+    }, false);
+    
+    </script>
+
+
+<script>
+    var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+  
+      copyTextareaBtn.addEventListener('click', function(event) {
+        var copyTextarea = document.querySelector(".output-text");
+        copyTextarea.focus();
+        copyTextarea.select();
+      
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Copying text command was ');
+          say_copy.innerHTML='Copied! ';
+          if(output.innerHTML==''){
+        say_copy.innerHTML='Nothing to copy :\\'}}catch (err)
+         {
+          console.log('Oops, unable to copy');
+        }
+      
+    copyTextareaBtn.classList.toggle('inner_copy')
+    }
+     
+      
+      );
+      
+          
+       
+      
+      </script>
+
+</html>
