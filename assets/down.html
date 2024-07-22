@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    gap:3rem}
+
+      textarea{
+        display: block;
+        margin:2rem
+      }
+    
+
+  </style>
+</head>
+<body>
+  
+
+<h1>Hello </h1>
+
+<main>
+
+<input type="file" id="inputfile" >
+
+
+
+
+<input type="submit" >
+
+
+
+<input type="text" id="output">
+
+
+</main>
+
+
+
+<script>
+
+
+let input=document.querySelector('#inputfile')
+let textarea=document.querySelector('#output')
+
+input.addEventListener('change',()=>
+{
+
+  let files=input.files;
+
+  if(files.length==0) return ;
+
+  const file=files[0];
+
+  let reader=new FileReader();
+
+  reader.onload=(e)=>{
+
+    const file=e.target.result;
+
+
+    const lines=file.split(/\r\n|\n/)
+
+
+    textarea.value=lines.join('\n')
+  };
+
+  reader.onerror=(e)=>alert(e.target.error.name);
+
+  reader.readAsText(file)
+
+})
+
+
+</script>
+
+
+
+
+</body>
+</html>
